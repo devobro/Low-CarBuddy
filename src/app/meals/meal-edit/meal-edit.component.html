@@ -1,0 +1,75 @@
+<div class="row">
+	<div class="col-xs-12">
+		<form [formGroup]="mealForm" (ngSubmit)="onSubmit()">
+			<div class="row">
+				<div class="col-xs-12">
+					<button 
+					type="submit" 
+					class="btn btn-success"
+					[disabled]="!mealForm.valid">Save</button>
+					<button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="date">Verify Today's Date:</label>
+						<input  
+						id="date"
+						formControlName="date"
+						value="{{ today | date }}" 
+						class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="mealName">Name your meal!</label>
+						<input 
+						type="text" 
+						id="mealName"
+						formControlName="mealName"
+						class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="fat">How much fat was in your meal? (in grams)</label>
+						<input 
+						type="number" 
+						id="fat"
+						formControlName="fat"
+						class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="carbs">How many carbs were in your meal? (in grams)</label>
+						<input 
+						type="number" 
+						id="carbs"
+						formControlName="carbs"
+						class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="protein">How much protein was in your meal? (in grams)</label>
+						<input 
+						type="number" 
+						id="protein"
+						formControlName="protein"
+						class="form-control">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

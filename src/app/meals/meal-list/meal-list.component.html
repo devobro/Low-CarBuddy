@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-xs-12">
+		<button class="btn btn-success" (click)="onNewMeal()">New Meal</button>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-xs-12">
+		<app-meal-item *ngFor="let mealEl of meals; let i = index"
+		[meal]="mealEl"
+		[index]="i"></app-meal-item>
+	</div>
+</div>
+

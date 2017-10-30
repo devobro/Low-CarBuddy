@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h1>{{ meal.mealName }}</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<div 
+		class="btn-group"
+		appDropdown>
+			<button type="button"
+			 class="btn btn-primary dropdown-toggle"
+			 >Manage Meal <span class="caret"></span></button>
+			 <ul class="dropdown-menu">
+			 <li><a style="cursor: pointer;" (click)="onEditMeal()">Edit Meal</a></li>
+			 <li><a style="cursor: pointer;" (click)="onDeleteMeal()">Delete Meal</a></li>
+			 </ul>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		Fat: {{ meal.fat }}
+	</div>
+	<div class="col-xs-12">
+		Carbs: {{ meal.carbs }}
+	</div>
+	<div class="col-xs-12">
+		Protein: {{ meal.protein }}
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<a 
+style="cursor: pointer;"
+[routerLink]="[index]"
+routerLinkActive="active" 
+class="list-group-item clearfix">
+	<div class="pull-left">
+		<h4 class="list-group-item-heading">{{ meal.mealName }}</h4>
+		<p class="list-group-item-text">{{ meal.date }}</p>
+	</div>
+	<span class="pull-right">
+		<p class="list-group-item-text"> Fat: {{ meal.fat }}g</p>
+		<p class="list-group-item-text"> Carbs: {{ meal.carbs }}g</p>
+		<p class="list-group-item-text"> Protein: {{ meal.protein }}g</p>
+	</span>
+</a>
